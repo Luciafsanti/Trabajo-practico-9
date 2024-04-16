@@ -37,7 +37,7 @@ const NavLink = styled(Link)`
 const Logo = styled.div`
   color: var(--WhiteSmoke);
   font-family: var(--logofont);
-  font-size: 20px;
+  font-size: 25px;
   font-weight: lighter;
   text-decoration: none;
 
@@ -88,7 +88,7 @@ const Button = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: var(--Reseda-green);
+    background-color: var(--Reseda-green-hover);
   }
 `;
 
@@ -142,15 +142,15 @@ const Navbar = () => {
           <LogoImg src="/LogoImg.jfif" alt="Logo" />
           Aromito Librería </Link>
       </Logo>
+      <MenuIcon onClick={toggleMenu}>
+        &#9776;
+      </MenuIcon>
+      <NavbarMenu isOpen={isOpen}>
       <SearchContainer>
         <SearchInput type="text" placeholder="Buscar..." />
         <SearchButton>Buscar</SearchButton>
         <FilterButton>Filtro</FilterButton>
       </SearchContainer>
-      <MenuIcon onClick={toggleMenu}>
-        &#9776;
-      </MenuIcon>
-      <NavbarMenu isOpen={isOpen}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/login">Iniciar sesión</NavLink>
         <NavLink to="/register">Registrarse</NavLink>
